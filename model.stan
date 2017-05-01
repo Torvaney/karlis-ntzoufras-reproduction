@@ -11,15 +11,18 @@ functions {
   }
 
   real zero_inflated_skellam_log(int k, real mu1, real mu2, real p) {
-    real base_log_prob;
+    real base_prob;
+    real prob;
     real log_prob;
 
-    base_log_prob = skellam_log(k, mu1, mu2);
+    base_prob = exp(skellam_log(k, mu1, mu2));
 
     if (k == 0)
-      log_prob = p + (1 - p) * base_log_prob;
+      prob = p + (1 - p) * base_prob;
     else
-      log_prob = (1 - p) * base_log_prob;
+      prob = (1 - p) * base_prob;
+      
+    log_prob = log(prob);
 
     return log_prob;
   }
