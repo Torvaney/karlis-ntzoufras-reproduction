@@ -38,7 +38,7 @@ data {
 }
 
 parameters {
-  // real<lower=0, upper=1> mixing_proportion;
+  real<lower=0, upper=1> mixing_proportion;
   real constant_mu;
   real home_advantage;
   real offense_raw[n_teams - 1];
@@ -66,7 +66,7 @@ model {
   vector[n_games] expected_goal_difference;
 
   // Priors
-  // mixing_proportion ~ uniform(0, 1);
+  mixing_proportion ~ uniform(0, 1);
   offense ~ normal(0, 10000);
   defense ~ normal(0, 10000);
   home_advantage ~ normal(0, 10);
@@ -85,7 +85,7 @@ model {
     goal_difference[g] ~ zero_inflated_skellam(
       home_expected_goals[g],
       away_expected_goals[g],
-      0.1
+      mixing_proportion
     );
   }
 }
