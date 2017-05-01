@@ -4,8 +4,9 @@ A reproduction of the method outlined in [*Bayesian modelling of football outcom
 
 Data comes from [football-data.co.uk](football-data.co.uk)
 
+## Figures
+
 Original                   |  Reproduction
 :-------------------------:|:-------------------------:
 ![](https://github.com/Torvaney/karlis-ntzoufras-reproduction/blob/master/figures/original-offense.png)  |  ![](https://github.com/Torvaney/karlis-ntzoufras-reproduction/blob/master/figures/offense.png)
-:-------------------------:|:-------------------------:
-![](https://github.com/Torvaney/karlis-ntzoufras-reproduction/blob/master/figures/original-defense.png)  |  ![](https://github.com/Torvaney/karlis-ntzoufras-reproduction/blob/master/figures/defense.png)
+![](https://github.com/Torvaney/karlis-ntzoufras-reproduction/blob/master/figures/original-defence.png)  |  ![](https://github.com/Torvaney/karlis-ntzoufras-reproduction/blob/master/figures/defense.png)
